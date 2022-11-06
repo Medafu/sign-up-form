@@ -11,43 +11,68 @@
     <script src="http://cdn.tailwindcss.com"></script>
 </head>
 <body class="flex">
-    <div id="sidebar" class="relative h-screen w-[45%] bg-cover" style="background-image: url(/assets/bg-image.jpg);">
-        <div class="relative flex items-center justify-center w-full bg-black/50 h-fit top-28 py-4">
+    <div id="sidebar" class="relative h-screen w-3/6 bg-cover" style="background-image: url(/assets/bg-image.jpg);">
+        <div class="relative flex items-center justify-center w-full bg-black/50 h-fit top-1/4 py-4">
             <img class="w-1/5 h-1/5" src="/assets/odin-logo.png" alt="odin logo">
             <p class="relative text-white text-5xl" style="font-family: 'Monoton', cursive;">ODIN</p>
         </div>
         <p class="absolute bottom-0 text-center text-sm w-full text-white">Photo by <a class="underline" href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a class="underline" href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></p>
     </div>
-    <div id="content">
-        <h1>This is not a real online service! 
-            You know you need something like 
-            this in your life to help you realize
-            your deepest dreams.<br>Sign up <span>now</span> to get started.
-        </h1>
-        <h1>You <span>know</span> you want to.</h1>
-        <div id="form">
-            <h1>Let's do this!</h1>
-            <form action="" method="post" class="flex">
-                <div>
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" name="first_name" id="first_name">
-                    <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email">
-                    <label for="pwd">PASSWORD</label>
-                    <input type="password" name="password" id="pwd">
-                </div>
-                <div>
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" name="last_name" id="last_name">
-                    <label for="number">PHONE NUMBER</label>
-                    <input type="tel" name="number" id="number">
-                    <label for="confirm">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirm" id="confirm">
-                </div>
-            </form>
+    <div id="content" class="flex flex-col justify-center bg-slate-50 h-screen">
+        <div class="font-semibold leading-tight text-lg pl-8 pr-56 mb-12">
+            <h1 class="mb-4">This is not a real online service!
+                You know you need something like
+                this in your life to help you realize
+                your deepest dreams.<br>Sign up <span class="italic">now</span> to get started.
+            </h1>
+            <h1>You <span class="italic mb-8">know</span> you want to.</h1>
         </div>
-        <button>Create Account</button>
-        <p>Already have an account? <span>Log in</span></p>
+        <form action="" method="post">
+            <div id="form" class="bg-white shadow-lg pl-8 py-8 mb-6 flex flex-col gap-1">
+                <h1 class="font-semibold text-lg mb-4">Let's do this!</h1>
+                <div class="flex gap-12">
+                    <div class="flex flex-col gap-4">
+                            <div class="block">
+                                <label class="block text-xs text-slate-500 font-semibold tracking-wider" for="first_name">FIRST NAME</label>
+                                <input type="text" class="outline-none leading-none rounded w-full text-base font-normal border border-gray-200 p-1 px-2
+                                focus:border-sky-700 focus:shadow-md" required name="first_name" id="first_name">
+                            </div>
+                            <div class="block">
+                                <label class="block text-xs text-slate-500 font-semibold tracking-wider" for="email">EMAIL</label>
+                                <input type="email" class="outline-none leading-none rounded w-full text-base font-normal border border-gray-200 p-1 px-2
+                                focus:border-sky-700 focus:shadow-md 
+                                invalid:border-pink-500 invalid:focus:border-pink-500" required name="email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+" id="email">
+                            </div>
+                            <div class="block">
+                                <label class="block text-xs text-slate-500 font-semibold tracking-wider" for="pwd">PASSWORD</label>
+                                <input type="password" class="outline-none leading-none rounded w-full text-base font-normal border border-gray-200 p-1 px-2
+                                focus:border-sky-700 focus:shadow-md" required name="password" id="pwd">
+                            </div>
+                        </div>
+                    <div class="flex flex-col gap-4">
+                            <div class="block">
+                                <label class="block text-xs text-slate-500 font-semibold tracking-wider" for="last_name">LAST NAME</label>
+                                <input type="text" class="outline-none leading-none rounded w-full text-base font-normal border border-gray-200 p-1 px-2
+                                focus:border-sky-700 focus:shadow-md" required name="last_name" id="last_name">
+                            </div>
+                            <div class="block">
+                                <label class="block text-xs text-slate-500 font-semibold tracking-wider" for="number">PHONE NUMBER</label>
+                                <input type="tel" class="outline-none leading-none rounded w-full text-base font-normal border border-gray-200 p-1 px-2
+                                focus:border-sky-700 focus:shadow-md" required name="number" pattern="[0-9]{10}|[0-9]{3}[- \.][0-9]{3}[- \.][0-9]{4}" id="number">
+                            </div>
+                            <div class="block">
+                                <label class="block text-xs text-slate-500 font-semibold tracking-wider" for="confirm">CONFIRM PASSWORD</label>
+                                <input type="password" class="outline-none leading-none rounded w-full text-base font-normal border border-gray-200 p-1 px-2
+                                focus:border-sky-700 focus:shadow-md" required name="confirm" id="confirm">
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="pl-8">
+                <button class="bg-lime-800/75 rounded-md text-white font-bold px-8 py-2 mb-8">Create Account</button>
+                <p class="font-semibold">Already have an account? <span class="text-lime-800/75">Log in</span></p>
+            </div>
+        </form>
     </div>
 </body>
 </html>
