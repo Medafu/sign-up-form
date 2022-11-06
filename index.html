@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> 
     <script src="http://cdn.tailwindcss.com"></script>
 </head>
 <body class="flex">
-    <div id="sidebar" class="h-screen w-1/3 bg-cover" style="background-image: url(/bg-image.jpg);">
-        <div>
-            <img src="/assets/odin-logo.png" alt="odin logo">
-            <p>ODIN</p>
+    <div id="sidebar" class="relative h-screen w-[45%] bg-cover" style="background-image: url(/assets/bg-image.jpg);">
+        <div class="relative flex items-center justify-center w-full bg-black/50 h-fit top-28 py-4">
+            <img class="w-1/5 h-1/5" src="/assets/odin-logo.png" alt="odin logo">
+            <p class="relative text-white text-5xl" style="font-family: 'Monoton', cursive;">ODIN</p>
         </div>
-        <p>Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></p>
+        <p class="absolute bottom-0 text-center text-sm w-full text-white">Photo by <a class="underline" href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a class="underline" href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a></p>
     </div>
     <div id="content">
-        <h1>This is not a real online servie! 
+        <h1>This is not a real online service! 
             You know you need something like 
             this in your life to help you realize
             your deepest dreams.<br>Sign up <span>now</span> to get started.
